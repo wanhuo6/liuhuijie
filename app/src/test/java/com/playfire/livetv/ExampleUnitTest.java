@@ -1,4 +1,4 @@
-package bryce.hujie.com.bryce;
+package com.playfire.livetv;
 
 import org.junit.Test;
 
