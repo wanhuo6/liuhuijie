@@ -32,7 +32,7 @@ import master.flame.danmaku.danmaku.model.android.Danmakus;
 import master.flame.danmaku.danmaku.parser.BaseDanmakuParser;
 import master.flame.danmaku.ui.widget.DanmakuView;
 
-public class MainActivity extends BaseActivity implements DrawHandler.Callback{
+public class MainActivity extends BaseActivity implements DrawHandler.Callback {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.video_view)
@@ -65,12 +65,12 @@ public class MainActivity extends BaseActivity implements DrawHandler.Callback{
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-
         //Uri uri = Uri.parse("http://kuaikuai.oss-cn-beijing.aliyuncs.com/upload/d2a226b1-3344-499c-8acc-d08831334a77.mp4");
         // String url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
         //String url="http://kuaikuai.oss-cn-beijing.aliyuncs.com/upload/d2a226b1-3344-499c-8acc-d08831334a77.mp4";
         // String mUrl = "http://221.174.125.8:9009/live/chid=29";
         //videoView.setVideoURI(Uri.parse(url));
+        mTvSend.setText("你好");
         mVideoView.setMediaController(new MediaController(this));
         mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test));
         // videoView.seekTo(2530000);
@@ -202,12 +202,12 @@ public class MainActivity extends BaseActivity implements DrawHandler.Callback{
 
     }
 
-    private MyClickListener mMyClickListener=new MyClickListener() {
+    private MyClickListener mMyClickListener = new MyClickListener() {
         @Override
         protected void onKKClick(View v) {
 
-            switch (v.getId()){
-                case R.id.operation_layout:
+            switch (v.getId()) {
+                case R.id.ll_operation:
                     if (mLlOperation.getVisibility() == View.GONE) {
                         mLlOperation.setVisibility(View.VISIBLE);
                     } else {
@@ -230,4 +230,5 @@ public class MainActivity extends BaseActivity implements DrawHandler.Callback{
 
         }
     };
+
 }
