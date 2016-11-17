@@ -70,7 +70,6 @@ public class MainActivity extends BaseActivity implements DrawHandler.Callback {
         //String url="http://kuaikuai.oss-cn-beijing.aliyuncs.com/upload/d2a226b1-3344-499c-8acc-d08831334a77.mp4";
         // String mUrl = "http://221.174.125.8:9009/live/chid=29";
         //videoView.setVideoURI(Uri.parse(url));
-        mTvSend.setText("你好");
         mVideoView.setMediaController(new MediaController(this));
         mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test));
         // videoView.seekTo(2530000);
@@ -207,7 +206,7 @@ public class MainActivity extends BaseActivity implements DrawHandler.Callback {
         protected void onKKClick(View v) {
 
             switch (v.getId()) {
-                case R.id.ll_operation:
+                case R.id.danmaku_view:
                     if (mLlOperation.getVisibility() == View.GONE) {
                         mLlOperation.setVisibility(View.VISIBLE);
                     } else {

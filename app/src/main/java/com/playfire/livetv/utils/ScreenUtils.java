@@ -14,7 +14,7 @@ public class ScreenUtils {
      * sp转px。
      */
     public static int sp2px(float spValue) {
-        final float fontScale = MyApplication.getApplication().getResources().getDisplayMetrics().scaledDensity;
+        final float fontScale = MyApplication.getApplication().getApplicationContext().getResources().getDisplayMetrics().scaledDensity;
         return (int) (spValue * fontScale + 0.5f);
     }
 
